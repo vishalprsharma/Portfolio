@@ -100,6 +100,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
       window.addEventListener('scroll', highlightNavLink);
   };
+const addSwipeSupport = (carousel) => {
+    let startX = 0;
+    let endX = 0;
+
+    carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) {
+            // swipe left → next slide
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            showSlide(currentIndex);
+        } else if (endX - startX > 50) {
+            // swipe right → previous slide
+            currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+            showSlide(currentIndex);
+        }
+    });
+};
+
+// In initCarousel:
+addSwipeSupport(carousel);
 
   // Initialize all components
   initCarousel();
