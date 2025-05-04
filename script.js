@@ -1,0 +1,110 @@
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', function() {
+  // 1. Carousel Functionality
+  const initCarousel = () => {
+      const carousel = document.querySelector('.carousel');
+      if (!carousel) return;
+      
+      const prevBtn = document.querySelector('.carousel-prev');
+      const nextBtn = document.querySelector('.carousel-next');
+      const slides = document.querySelectorAll('.carousel-slide');
+      let currentIndex = 0;
+
+      function showSlide(index) {
+          slides.forEach((slide, i) => {
+              slide.style.transform = `translateX(${(i - index) * 100}%)`;
+          });
+      }
+
+      if (prevBtn && nextBtn) {
+          prevBtn.addEventListener('click', () => {
+              currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+              showSlide(currentIndex);
+          });
+
+          nextBtn.addEventListener('click', () => {
+              currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+              showSlide(currentIndex);
+          });
+
+          showSlide(currentIndex);
+      }
+  };
+
+  // 2. Smooth Scrolling (single instance)
+  const initSmoothScroll = () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+              const target = document.querySelector(this.getAttribute('href'));
+              if (target) {
+                  target.scrollIntoView({
+                      behavior: 'smooth'
+                  });
+              }
+          });
+      });
+  };
+
+  // 3. Sticky Header
+  const initStickyHeader = () => {
+      const header = document.querySelector('header');
+      if (!header) return;
+      
+      const sticky = header.offsetTop;
+      function handleScroll() {
+          if (window.pageYOffset > sticky) {
+              header.classList.add('sticky');
+          } else {
+              header.classList.remove('sticky');
+          }
+      }
+      window.addEventListener('scroll', handleScroll);
+  };
+
+  // 4. Back to Top Button
+  const initBackToTop = () => {
+      const backToTopBtn = document.createElement('button');
+      backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+      backToTopBtn.className = 'back-to-top';
+      document.body.appendChild(backToTopBtn);
+
+      function toggleBackToTopButton() {
+          if (window.scrollY > 300) {
+              backToTopBtn.style.display = 'block';
+          } else {
+              backToTopBtn.style.display = 'none';
+          }
+      }
+
+      backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      window.addEventListener('scroll', toggleBackToTopButton);
+  };
+
+  // 5. Active Navigation Highlight
+  const initActiveNav = () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
+
+      if (sections.length === 0 || navLinks.length === 0) return;
+
+      function highlightNavLink() {
+          let index = sections.length;
+          while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+          navLinks.forEach((link) => link.classList.remove('active'));
+          if (navLinks[index]) navLinks[index].classList.add('active');
+      }
+
+      window.addEventListener('scroll', highlightNavLink);
+  };
+
+  // Initialize all components
+  initCarousel();
+  initSmoothScroll();
+  initStickyHeader();
+  initBackToTop();
+  initActiveNav();
+});
