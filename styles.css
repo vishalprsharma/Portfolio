@@ -607,28 +607,28 @@ a {
 }
 
 #project1 {
-  background-image: url(stack/movie.jpeg);
+  background-image: url(stack/movie.jpg);
   right: 5%;
   margin-top: 5rem;
 }
 
 #project2 {
-  background-image: url(stack/blockchain.jpeg);
+  background-image: url(stack/blockchain-9243900_1920.jpg);
   left: 5%;
 }
 
 #project3 {
-  background-image: url(stack/download.jpeg);
+  background-image: url(stack/dataintegration.jpg);
   right: 5%;
 }
 
 #project4 {
-  background-image: url(stack/onepiece.jpg);
+  background-image: url(stack/OnePieceTower.jpeg);
   left: 5%;
 }
 
 #project5 {
-  background-image: url(stack/ecommerce.jpeg);
+  background-image: url(stack/ecommerce.jpg);
   right: 5%;
 }
 
@@ -1975,7 +1975,430 @@ textarea {
   filter: grayscale(0%) brightness(1.3);
 }
 .carousel-prev, .carousel-next, .back-to-top {
-    touch-action: manipulation;
-    min-width: 44px;
-    min-height: 44px;
+  touch-action: manipulation;
+  min-width: 44px;
+  min-height: 44px;
+}
+.back-to-top {
+  bottom: 80px; /* slightly higher for mobile */
+}
+/* Make sure the skills container wraps properly */
+.projectSkillsContainer {
+  display: flex;
+  flex-wrap: wrap;           /* allow wrapping to next line */
+  gap: 8px;                 /* add space between icons */
+  justify-content: flex-start; /* align icons to the left */
+  align-items: center;
+}
+
+/* Adjust image sizes for smaller screens */
+.projectSkillsContainer img {
+  width: 40px;              /* reduce size for mobile if needed */
+  height: auto;
+}
+
+/* Add mobile-specific tweaks */
+@media (max-width: 768px) {
+  .projectSkillsContainer {
+      justify-content: center; /* center icons on small screens */
+  }
+
+  .projectCard {
+      flex-direction: column; /* stack content vertically if not already */
+  }
+
+  .projectContent {
+      text-align: center;    /* center text and buttons on small screens */
+  }
+
+  .btnGroup {
+      flex-direction: column; /* stack buttons vertically */
+      gap: 10px;
+  }
+}
+.projectCard {
+  display: flex;
+  flex-direction: row;  /* desktop: content side by side */
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+      flex-direction: column; /* mobile: stack top to bottom */
+      align-items: center;
+      text-align: center;
+  }
+}
+.projectSkillsContainer img {
+  width: 40px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .projectSkillsContainer img {
+      width: 35px;  /* slightly smaller on small screens */
+  }
+}
+.projectCard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+}
+.projectNumber {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .projectNumber {
+      order: -1; /* move to top if needed */
+      margin-bottom: 10px;
+  }
+}
+.projectContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .projectContent {
+      align-items: center;
+  }
+}
+.projectSkillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .projectSkillsContainer {
+      justify-content: center;
+      margin-bottom: 10px;
+  }
+}
+.projectHeading {
+  font-size: 1.5rem;
+}
+
+.projectSubHeading {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .projectHeading {
+      font-size: 1.25rem;
+  }
+
+  .projectSubHeading {
+      font-size: 0.9rem;
+  }
+}
+.projectSkillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.projectSkillsContainer img {
+  height: 40px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .projectSkillsContainer {
+      justify-content: center;
+      margin-bottom: 15px;
+  }
+
+  .projectSkillsContainer img {
+      height: 35px;
+      margin: 5px;
+  }
+}
+.projectCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .projectNumber {
+      margin-bottom: 10px;
+  }
+
+  .projectContent {
+      width: 100%;
+      align-items: center;
+  }
+
+  .projectSkillsContainer {
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+  }
+
+  .projectSkillsContainer img {
+      height: 35px;
+      margin: 5px;
+  }
+}
+/*mobile*/
+
+@media (max-width: 900px) {
+  .nav-items {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    border-radius: 0;
+    z-index: 100;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .nav-item a {
+    display: block;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 8rem 1rem 4rem;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-section-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-section-description {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+    margin: 0.5rem 0;
+  }
+
+  .myCard {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+    width: 95%;
+    height: auto;
+    min-height: 300px;
+    margin: 1rem auto;
+  }
+
+  .projectContent {
+    position: relative;
+    bottom: auto;
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .projectHeading {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+
+  .projectSubHeading {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .projectSkillsContainer {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .projectSkill {
+    width: 30px;
+    height: 30px;
+  }
+
+  .btnGroup {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .skillContainer {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .leftSkillContainer, .rightSkillContainer {
+    width: 100%;
+  }
+
+  .rightSkillContainer {
+    margin-right: 0;
+    margin-top: 2rem;
+  }
+
+  .skillHeading {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .skillSubHeading p {
+    font-size: 0.9rem;
+  }
+
+  .skillsLogos {
+    justify-content: center;
+  }
+
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 2rem 0;
+  }
+
+  .upper {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .lower {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .right form {
+    min-width: 90%;
+    padding: 1rem;
+  }
+
+  input, textarea {
+    min-height: 35px;
+    margin-bottom: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .educationCard {
+    padding: 1.5rem;
+  }
+
+  .educationNumber {
+    font-size: 3rem;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .educationHeader h3 {
+    font-size: 1.2rem;
+  }
+
+  .institution, .duration {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .secondLast {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .last-quote {
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .last-quote p {
+    font-size: 0.8rem;
+  }
+
+  .copyright {
+    height: auto;
+    padding: 0.5rem;
+  }
+}
+/* Prevent text size adjustment on mobile */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Improve tap targets */
+a, button, .nav-item {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent zoom on form inputs */
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+.touch-active {
+  opacity: 0.7;
+  transform: scale(0.95);
+  transition: all 0.1s;
 }
