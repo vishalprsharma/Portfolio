@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       window.addEventListener('scroll', highlightNavLink);
   };
-const addSwipeSupport = (carousel) => {
+  const addSwipeSupport = (carousel) => {
     let startX = 0;
     let endX = 0;
 
@@ -124,6 +124,14 @@ const addSwipeSupport = (carousel) => {
 
 // In initCarousel:
 addSwipeSupport(carousel);
+const isMobile = window.innerWidth <= 768;
+
+if (!isMobile) {
+    initStickyHeader();
+}
+window.addEventListener('resize', () => {
+    // Recalculate breakpoints, maybe reinitialize some behaviors
+});
 
   // Initialize all components
   initCarousel();
@@ -132,3 +140,36 @@ addSwipeSupport(carousel);
   initBackToTop();
   initActiveNav();
 });
+// Add this to your existing script.js
+const initMobileMenu = () => {
+    const hamburger = document.querySelector('.hamburger-icon');
+    const navItems = document.querySelector('.nav-items');
+    
+    if (hamburger && navItems) {
+      hamburger.addEventListener('click', () => {
+        navItems.style.display = navItems.style.display === 'flex' ? 'none' : 'flex';
+      });
+    }
+  };
+  
+  // Call this in your initialization
+  initMobileMenu();
+  // Add this to your existing script
+const addTouchSupport = () => {
+    // Prevent 300ms delay on touch devices
+    document.addEventListener('touchstart', function() {}, true);
+    
+    // Improve touch feedback
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('touchstart', function() {
+        this.classList.add('touch-active');
+      });
+      
+      el.addEventListener('touchend', function() {
+        this.classList.remove('touch-active');
+      });
+    });
+  };
+  
+  // Call this in your initialization
+  addTouchSupport();
