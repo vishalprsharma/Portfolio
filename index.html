@@ -1,498 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Vishal Sharma, portfolio, web development, Python, Java, full-stack">
-    <meta name="description" content="Vishal Sharma - Computer Science Engineer | Web Developer | Python & Java Programmer | Passionate about solving complex problems through code">
-    <meta name="author" content="Vishal Sharma">
-    <!-- Open Graph meta tags for social media sharing -->
-    <meta property="og:title" content="Vishal Sharma - Portfolio Website">
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="./userAsset/Vsmall-c.gif" />
-    <meta property="og:description" content="Vishal Sharma - Computer Science Engineer | Web Developer | Python & Java Programmer">
-    <title>Vishal Sharma - Portfolio Website</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="shortcut icon" href="./userAsset/small-c.gif" type="image/x-icon">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishal Sharma - Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300..800&family=Playfair+Display:wght@400..900&family=Unbounded:wght@200..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="wrapper">
-        <nav class="navbar">
-            <a href="#">
-                <div class="logo-container">
-                    <img src="stack\profile.jpg" class="logo">
-                    <div class="logo-text">Vishal Sharma</div>
-                </div>
-            </a>
+  <div id="loading-screen">
+    <div class="loading-content">
+      <i class="fa-solid fa-laptop-code fa-5x main-icon hidden"></i>
 
-            <div class="nav-items">
-                <div class="nav-item"><a href="#experience">Experience</a></div>
-                <div class="nav-item"><a href="#projects">Projects</a></div>
-                <div class="nav-item"><a href="#skills">Skills</a></div>
-                <div class="nav-item"><a href="#contactMe">Contact</a></div>
-            </div>
+      <h1 id="loading-text" class="hidden">MY PROFILE</h1>
 
-            <div class="nav-links">
-                <a href="https://github.com/vishalprsharma" target="_blank">
-                    <i title="GitHub Profile" class="fab fa-github nav-icon"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/vishal-prasad-sharma-327634229/" target="_blank">
-                    <i title="LinkedIn Profile" class="fab fa-linkedin nav-icon"></i>
-                </a>
-                <a href="stack\VishalSharma_Resume.pdf" download>
-                    <i title="Download Resume" class="fas fa-file-pdf nav-icon"></i>
-                </a>
-                <a class="hamburger-icon">
-                    <i class="fas fa-ellipsis-v"></i>
-                </a>
-            </div>
-        </nav>
-        
-        <div class="outerSectionDiv">
-            <div class="hero" id="hero-section">
-                <div class="space">
-                    <video autoplay muted loop>
-                        <source src="/stack/blackHoleee-2.webm" type="video/webm">
-                    </video>
-                </div>
+      <div class="sub-icons">
+        <i class="fa-brands fa-github fa-2x hidden"></i>
+        <i class="fa-solid fa-code fa-2x hidden"></i>
+        <i class="fa-solid fa-user fa-2x hidden"></i>
+      </div>
 
-                <div class="hero-section">
-                    <div class="hero-section-left">
-                        <div class="hero-section-heading">
-                            <span>Namaste 🙏</span>
-                        </div>
-                        <div class="hero-section-sub-heading">
-                            I'm &lt;<span class="role"></span>/&gt;
-                        </div>
-                        <div class="hero-section-description">
-                            Computer Science graduate skilled in Python, Java, and full-stack development. 
-                            Passionate about solving complex problems through code and contributing to open-source projects.
-                        </div>
-                        <div class="hero-buttons">
-                            <a href="mailto:vishalpr.sharma123@gmail.com" target="_blank" class="btn">HIRE ME</a>
-                            <a href="#projects" class="btn secondary-btn">VIEW PROJECTS</a>
-                        </div>
-                    </div>
-
-                    <div class="hero-section-right">
-                        <div class="myCard">
-                            <div class="innerCard">
-                                <div class="frontSide">
-                                    <div class="profile-photo-container">
-                                    <img src="stack\profile.jpg" alt="">
-                                </div>
-                            </div>
-                                <div class="backSide">
-                                    <p class="title">VISHAL SHARMA</p>
-                                    <p class="subtitle">Full Stack Developer</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="faded-text absolute">Vishal Sharma</div>
-        </div>
-
-        <!-- Experience Section -->
-        <section id="experience" class="experienceSection">
-            <div class="outerSectionDiv">
-                <h2 class="sectionTitle">Experience</h2>
-                <div class="experienceContainer">
-                    <!-- Experience Card 1 -->
-                    <div class="experienceCard">
-                        <div class="experienceNumber rightNumber">01</div>
-                        <div class="experienceContent leftExperienceContent">
-                            <div class="experienceHeader">
-                                <h3>Web Development Intern</h3>
-                                <span class="company">Varcons Technologies Pvt Ltd</span>
-                                <span class="duration">May 2023 - Jul 2023 | Bangalore</span>
-                            </div>
-                            <div class="experienceDetails">
-                                <p>Contributed to designing, building and optimizing responsive websites that improved user experience and performance.</p>
-                                <ul class="experienceHighlights">
-                                    <li>Developed responsive sites using HTML/CSS/JS with 100% cross-device compatibility</li>
-                                    <li>Boosted stability via SIT/UAT testing, resolving 15+ critical bugs</li>
-                                    <li>Improved UX through feedback-driven changes, reducing support tickets by 30%</li>
-                                    <li>Enhanced performance by 25% through code and asset optimization</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Add more experience cards here if needed -->
-                </div>
-            </div>
-        </section>
-        
-
-        <!-- Project Section Start -->
-        <section id="projects" class="projectSection">
-            <div class="outerSectionDiv">
-                <h2 class="sectionTitle">Projects</h2>
-                <div class="projectContainer">
-                    <!-- Project 1 -->
-                    <div class="projectCard" id="project1">
-                        <div class="projectNumber rightNumber">01</div>
-                        <div class="projectContent leftProjectContent">
-                            <div class="projectSkillsContainer">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt="Python" style="color: #3776AB">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original-wordmark.svg" alt="Flask" style="color: #ffffff">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" alt="Pandas" style="color: #150458">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original-wordmark.svg" alt="TensorFlow" style="color: #FF6F00">
-                            </div>
-                            <h2 class="projectHeading">Movie Recommendation System</h2>
-                            <p class="projectSubHeading">
-                                Content-based recommender using NLP (Count Vectorizer + cosine similarity) on 10,000+ movie records, improving suggestion relevance by 40% vs baseline popularity filters.
-                            </p>
-                            <ul class="projectHighlights">
-                                <li>Developed Flask web app with &lt;1s response time</li>
-                                <li>Reduced "no results" errors by 75% with fallback templates</li>
-                                <li>Achieved 85% user satisfaction in testing</li>
-                            </ul>
-                            <div class="btnGroup">
-                                <a href="stack\Screenshot (3).png" target="_blank" class="projectBtn">VIEW DEMO</a>
-                                <a href="https://github.com/vishalprsharma/Movie-Recommendation-System" class="github" target="_blank">
-                                    <i title="GitHub Link" class="fab fa-github icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Project 2 -->
-                    <div class="projectCard" id="project2">
-                        <div class="projectNumber leftNumber">02</div>
-                        <div class="projectContent rightProjectContent">
-                            <div class="projectSkillsContainer">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt="Python" style="color: #3776AB">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original-wordmark.svg" alt="Flask" style="color: #ffffff">
-                                <img src="https://api.iconify.design/mdi:qrcode.svg" alt="QR Code" class="projectSkill qrcode">
-                                <img src="https://api.iconify.design/simple-icons:blockchaindotcom.svg?color=%23121D33" alt="Blockchain" class="projectSkill blockchain">
-                            </div>
-                            <h2 class="projectHeading">Blockchain Certificate Generator</h2>
-                            <p class="projectSubHeading">
-                                Designed tamper-proof certificate system using SHA-256 hashing across 4 distributed nodes, achieving 100% data integrity in validation tests.
-                            </p>
-                            <ul class="projectHighlights">
-                                <li>Engineered QR-code verification reducing validation time by 90%</li>
-                                <li>Prevented forgery risks with cryptographic ledger</li>
-                                <li>Scaled to process 200+ certificates/hour</li>
-                            </ul>
-                            <div class="btnGroup">
-                                <a href="stack\Screenshot (2).png" target="_blank" class="projectBtn">VIEW DEMO</a>
-                                <a href="https://github.com/vishalprsharma/BlockChain-Certificate" class="github" target="_blank">
-                                    <i title="GitHub Link" class="fab fa-github icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Project 3 -->
-                    <div class="projectCard" id="project3">
-                        <div class="projectNumber rightNumber">03</div>
-                        <div class="projectContent leftProjectContent">
-                            <div class="projectSkillsContainer">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" alt="Java" style="color: #007396">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="SQL" style="color: #4479A1">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" alt="JDBC" style="color: #F80000">
-                            </div>
-                            <h2 class="projectHeading">Automated Customer Data Integration</h2>
-                            <p class="projectSubHeading">
-                                Streamlined 500+ daily customer records using Core Java and JDBC, achieving 95% data accuracy and cutting manual processing time by 50%.
-                            </p>
-                            <ul class="projectHighlights">
-                                <li>Systematized data validation reducing invalid entries by 50%</li>
-                                <li>Ensured 97% database accuracy with standardized protocols</li>
-                                <li>Eliminated 30+ recurring data issues</li>
-                            </ul>
-                            <div class="btnGroup">
-                                <a href="a" target="_blank" class="projectBtn">VIEW DEMO</a>
-                                <a href="a" class="github" target="_blank">
-                                    <i title="GitHub Link" class="fab fa-github icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Project 4 -->
-                    <div class="projectCard" id="project4">
-                        <div class="projectNumber leftNumber">04</div>
-                        <div class="projectContent rightProjectContent">
-                            <div class="projectSkillsContainer">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="HTML" style="color: #E34F26">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="CSS" style="color: #1572B6">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" style="color: #F7DF1E">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" alt="Bootstrap" style="color: #7952B3">
-                            </div>
-                            <h2 class="projectHeading">One Piece Restaurant Website</h2>
-                            <p class="projectSubHeading">
-                                Mobile-first website using Bootstrap with 100% cross-device compatibility that increased mobile user engagement by 35%.
-                            </p>
-                            <ul class="projectHighlights">
-                                <li>Enhanced UX improving session duration by 20%</li>
-                                <li>Optimized for SEO increasing organic traffic by 15%</li>
-                                <li>Reduced bounce rate by 25% through redesign</li>
-                            </ul>
-                            <div class="btnGroup">
-                                <a href="https://vishalprsharma.github.io/One-Piece-Restraunt/" target="_blank" class="projectBtn">VIEW DEMO</a>
-                                <a href="https://github.com/vishalprsharma/One-Piece-Restraunt" class="github" target="_blank">
-                                    <i title="GitHub Link" class="fab fa-github icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                     <!-- Project 5 -->
-                     <div class="projectCard" id="project5">
-                        <div class="projectNumber rightNumber">05</div>
-                        <div class="projectContent leftProjectContent">
-                            <div class="projectSkillsContainer">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="HTML" style="color: #E34F26">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="CSS" style="color: #1572B6">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" style="color: #F7DF1E">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" alt="Bootstrap" style="color: #7952B3">
-                            </div>
-                            <h2 class="projectHeading">Ethions Ethical Fashion E-Commerce Website </h2>
-                            <p class="projectSubHeading">
-                                Built a fully responsive ethical fashion site (HTML, CSS, JS), achieving 100% mobile compatibility and boosting mobile engagement by 30%.
-                            </p>
-                            <ul class="projectHighlights">
-                                <li>Implemented dynamic cart system, increasing user retention and conversions by ~20%.</li>
-                                <li>Enhanced UX with smooth navigation and animations, improving average session time by 25%.</li>
-                                <li> Optimized SEO and load performance with semantic HTML5, driving ~15% more organic traffic.</li>
-                            </ul>
-                            <div class="btnGroup">
-                                <a href="https://vishalprsharma.github.io/Ethical-Fashion-Site/" target="_blank" class="projectBtn">VIEW DEMO</a>
-                                <a href="https://github.com/vishalprsharma/Ethical-Fashion-Site" class="github" target="_blank">
-                                    <i title="GitHub Link" class="fab fa-github icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<!-- Skills Section Start -->
-
-<section class="skillsSection" id="skills">
-    <div class="outerSectionDiv skillContainer">
-        <div class="leftSkillContainer">
-            <h2 class="skillHeading">My Skills & <br/>Expertise</h2>
-            <div class="skillSubHeading">
-                <p>As a Computer Science graduate with hands-on experience in web development and software engineering, 
-                I've developed a diverse skill set that combines technical proficiency with problem-solving abilities.</p>
-                <p>My internship at Varcons Technologies helped me hone my web development skills, while my academic 
-                projects allowed me to explore data science, blockchain, and full-stack development.</p>
-                <p>I'm particularly proud of solving 200+ DSA problems on platforms like Hackerrank and Leetcode, 
-                which has strengthened my algorithmic thinking and coding skills.</p>
-            </div>
-        </div>
-
-        <div class="rightSkillContainer">
-            <!-- Languages -->
-            <div class="skillsCategory">
-                <h3>Languages</h3>
-                <div class="skillsLogos">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" alt="Python" class="skill-icon" style="color: #3776AB">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" alt="Java" class="skill-icon" style="color: #007396">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon" style="color: #F7DF1E">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C" class="skill-icon" style="color: #A8B9CC">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#" class="skill-icon" style="color: #239120">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" alt="R" class="skill-icon" style="color: #276DC3">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="SQL" class="skill-icon" style="color: #4479A1">
-                </div>
-            </div>
-
-            <!-- Web Technologies -->
-            <div class="skillsCategory">
-                <h3>Web Technologies</h3>
-                <div class="skillsLogos">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" alt="React" class="skill-icon" style="color: #61DAFB">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original-wordmark.svg" alt="Flask" class="skill-icon" style="color: #ffffff">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="HTML" class="skill-icon" style="color: #E34F26">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="CSS" class="skill-icon" style="color: #1572B6">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" alt="Bootstrap" class="skill-icon" style="color: #7952B3">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" class="skill-icon" style="color: #339933">
-                </div>
-            </div>
-
-            <!-- Data Science -->
-            <div class="skillsCategory">
-                <h3>Data Science</h3>
-                <div class="skillsLogos">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" alt="Pandas" class="skill-icon" style="color: #150458">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original-wordmark.svg" alt="NumPy" class="skill-icon" style="color: #013243">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original-wordmark.svg" alt="TensorFlow" class="skill-icon" style="color: #FF6F00">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" alt="Jupyter" class="skill-icon" style="color: #F37626">
-                </div>
-            </div>
-
-            <!-- Tools & Concepts -->
-            <div class="skillsCategory">
-                <h3>Tools & Concepts</h3>
-                <div class="skillsLogos">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" alt="Git" class="skill-icon" style="color: #F05032">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" alt="GitHub" class="skill-icon" style="color: #ffffff">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" alt="Docker" class="skill-icon" style="color: #2496ED">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain-wordmark.svg" alt="Kubernetes" class="skill-icon" style="color: #326CE5">
-                </div>
-            </div>
-        </div>
+      <h2 id="designer-text" class="hidden">Designed by Vishal</h2>
     </div>
-</section>
-
-        <!-- Education Section -->
-        <section id="education" class="educationSection">
-            <div class="outerSectionDiv">
-                <h2 class="sectionTitle">Education</h2>
-                <div class="educationContainer">
-                    <!-- Education Card 1 -->
-                    <div class="educationCard">
-                        <div class="educationNumber rightNumber">01</div>
-                        <div class="educationContent leftEducationContent">
-                            <div class="educationHeader">
-                                <h3>Bachelor of Engineering – Computer Science</h3>
-                                <span class="institution">ACS College of Engineering, Bangalore</span>
-                                <span class="duration">2021 - 2025</span>
-                            </div>
-                            <div class="educationDetails">
-                                <ul class="educationHighlights">
-                                    <li>Specialization in Full Stack Development</li>
-                                    <li>Coursework in Data Structures, Algorithms, and Database Systems</li>
-                                    <li>GPA: 3.8/4.0</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Education Card 2 -->
-                    <div class="educationCard">
-                        <div class="educationNumber rightNumber">02</div>
-                        <div class="educationContent leftEducationContent">
-                            <div class="educationHeader">
-                                <h3>Class 12th (CBSE)</h3>
-                                <span class="institution">IGJ Higher Secondary School, Pasighat</span>
-                                <span class="duration">2021 | Percentage: 78%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Education Card 3 -->
-                    <div class="educationCard">
-                        <div class="educationNumber rightNumber">03</div>
-                        <div class="educationContent leftEducationContent">
-                            <div class="educationHeader">
-                                <h3>Class 10th (CBSE)</h3>
-                                <span class="institution">Siang Model Higher Secondary School, Pasighat</span>
-                                <span class="duration">2019 | Percentage: 84%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contactSection" id="contactMe">
-            <div class="contactGrad">
-                <div class="outerSectionDiv">
-                    <div class="upper">
-                        <p>Let's
-                        <h3>Connect!</h3>
-                        </p>
-                        <p class="contact-info">
-                            <i class="fas fa-envelope"></i> vishalpr.sharma123@gmail.com |    
-                            <i class="fas fa-phone"></i> +91 8837324457
-                        </p>
-                    </div>
-
-                    <div class="lower">
-                        <div class="left_img">
-                            <img src="stack\3d-call-center-employee-pointing-aside-blank-space_168450-172.webp" alt="Contact illustration">
-                        </div>
-
-                        <div class="right">
-                            <form action="https://formspree.io/f/xgvkkweq" method="POST">
-                                <input type="text" class="name" id="name" name="name" placeholder="Your Name" required>
-                                <input type="email" class="email" id="email" name="email" placeholder="Your Email" required>
-                                <input type="text" class="subject" id="subject" name="subject" placeholder="Subject" required>
-                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
-                                <button type="submit" class="send-btn">
-                                    <div class="svg-wrapper-1">
-                                        <div class="svg-wrapper">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <span>Send</span>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <div class="outerSectionDiv ft-grad">
-                <div class="secondLast">
-                    <a href="#">
-                        <h2>Vishal Sharma</h2>
-                    </a>
-                    <p>Thanks for visiting my portfolio ❤️</p>
-
-                    <div class="last-links">
-                        <a href="https://github.com/vishalprsharma" target="_blank">
-                            <i title="GitHub Profile" class="fab fa-github nav-icon"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/vishal-prasad-sharma-327634229/" target="_blank">
-                            <i title="LinkedIn Profile" class="fab fa-linkedin nav-icon"></i>
-                        </a>
-                        <a href="mailto:vishalpr.sharma123@gmail.com" target="_blank">
-                            <i title="Email" class="fas fa-envelope nav-icon"></i>
-                        </a>
-                    </div>
-
-                    <div class="last-quote">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="124" height="14" fill="currentColor" class="left-border">
-                            <path d=""></path>
-                        </svg>
-                        <p>Code is like humor. When you have to explain it, it's bad.</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="124" height="14" fill="currentColor" class="right-border">
-                            <path d=""></path>
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="copyright">
-                    <p>&copy;
-                        <script type="text/javascript">
-                            document.write(new Date().getFullYear());
-                        </script>
-                        <a href="#" style="color: rgb(128, 128, 128); font-weight: 800;">Vishal Sharma</a> All rights reserved.
-                    </p>
-                </div>
-            </div>
-        </footer>
+  </div>
+  <header class="header-list">
+    <div class="div-list ">
+      <ul class="ul-list">
+        <li class="active">
+          <i class="fa-regular fa-house"></i>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <i class="fa-regular fa-address-card"></i>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <i class="fa-regular fa-folder-open"></i>
+          <a href="#project">Projects</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-code"></i>
+          <a href="#services">Expertise</a>
+        </li>
+        <li>
+          <i class="fa-regular fa-envelope"></i>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
     </div>
+  </header>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@3.0/dist/iconify.min.js"></script>
-    <script src="script.js"></script> 
-    <script>
-        // Typed.js initialization for role animation
-        var typed = new Typed('.role', {
-            strings: ['Developer', 'Programmer', 'Problem Solver', 'Tech Enthusiast'],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
-        });
-    </script>
+  <!-- home -->
+
+  <section class="home" id="home">
+    <p class="home-p">
+      <span class="home-s">. </span>Available for freelance work
+    </p>
+    <div class="home-container">
+      <div class="home-section">
+        <div class="info-home">
+          <h1>Hi, I'm Vishal Prasad Sharma</h1>
+          <h3>Full Stack/Software Developer</h3>
+          <div class="info-p">
+            <p>Computer Science graduate skilled in Python, Java, and full-stack development.</p>
+            <p>I create beutiful, function, and user-centerd digital experiences.</p>
+            <p>I bring ideas to life through clean code and thoughtful design</p>
+          </div>
+          <div class="info-p2">
+            <p><i class="fa-solid fa-location-dot"></i> Based in India</p>
+            <p><i class="fa-solid fa-briefcase"></i> Available Now</p>
+          </div>
+          <div class="btnn">
+            <button class="btn-home1"><i class="fa-solid fa-arrow-right"></i> Hire Me</button>
+            <button href="" class="btn-home2"><i class="fa-solid fa-download"></i> Download CV</button>
+          </div>
+          <div class="hhr">
+            <hr>
+          </div>
+          <div class="follow">
+            <p class="followw">Follow me:</p>
+            <ul>
+              <li><a href="https://github.com/vishalprsharma"><i class="fa-brands fa-github"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/vishal-prasad-sharma-327634229/"><i
+                    class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img src="images/prof pfp.png" alt="">
+    </div>
+  </section>
+
+  <!--  home  -->
+
+  <!--  About Me -->
+
+  <section class="about" id="about">
+    <div class="about-header">
+      <p id="aboutme">About Me</p>
+      <div class="title">
+        <h1>Building Meaningful</h1>
+        <h1>Digital Experiences</h1>
+      </div>
+      <div class="hrrr">
+        <hr>
+      </div>
+      <div class="about-container">
+        <div class="info-about">
+          <div class="about-info">
+            <p>
+              I'm a curious and passionate <strong>Full-Stack Developer</strong> who loves turning ideas into
+              interactive, meaningful web experiences.
+              My journey into tech started with a simple “How does this website work?” — and that question quickly
+              turned into a lifelong obsession with creating, learning, and innovating.
+            </p>
+
+            <p>
+              I enjoy building projects that are not just functional, but feel good to use — combining clean design,
+              logical structure, and modern technologies like
+              <strong>Python, Java, JavaScript, React,</strong> and <strong>Flask</strong>.
+              Whether it’s designing smooth interfaces or optimizing backend logic, I love making things that work
+              beautifully.
+            </p>
+
+            <p>
+              When I’m not coding, you’ll probably find me experimenting with new tech tools, tweaking my personal
+              projects for “just one more improvement,”
+              or watching tech talks with a cup of coffee that’s probably gone cold. ☕
+              I believe in <strong>continuous learning, collaboration, and a touch of humor</strong> — because code is
+              serious business, but creating it should be fun too.
+            </p>
+            </p>
+          </div>
+        </div>
+        <img src="images/anime pfp.png" alt="">
+      </div>
+    </div>
+    <h2>My Experience</h2>
+    <div class="card">
+      <div class="c1">
+        <h3><i class="fa-solid fa-laptop-code"></i> AI DevOps Engineer – Rooman Technologies (Sept 2024 – Feb 2025)</h3>
+        <p>
+          Worked on automating deployment pipelines and optimizing cloud infrastructure.
+          Improved scalability, reduced downtime, and implemented real-time monitoring using Docker, Jenkins, and
+          Kubernetes.
+        </p>
+      </div>
+      <div class="c1">
+        <h3><i class="fa-solid fa-code-branch"></i> Full Stack Developer Intern – Varcons Technologies Pvt. Ltd. (May
+          2023 – July 2023)
+        </h3>
+        <p>
+          Contributed to building and optimizing responsive websites.
+          Enhanced performance, resolved critical bugs, and improved user experience through front-end and back-end
+          development.
+        </p>
+      </div>
+    </div>
+    <div class="c1" id="Ed">
+      <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+      <p><strong>Bachelor of Engineering</strong> in <strong>Computer Science and Engineering</strong>
+        — ACS College of Engineering, Bangalore (2021–2025)</p>
+    </div>
+  </section>
+
+  <!--About ME-->
+
+  <!--Projects-->
+  <section class="project" id="project">
+    <p>Projects</p>
+    <h1>Featured Work</h1>
+    <hr>
+    <div class="info-pro">
+      <p>A showcase of my recent projects demonstrating expertise in full-stack </p>
+      <p>development, modern frameworks, and creative problem-solving.</p>
+    </div>
+    <div class="projects-container">
+
+      <div class="project-card">
+        <img src="images/ethions.png" alt="E-Commerce Website">
+        <h3>Ethions Ethical Fashion E-Commerce Website</h3>
+        <p>Modern online store with product filtering, cart, and payment system.</p>
+        <div class="skills">
+          <a href="#">HTML</a>
+          <a href="#">CSS</a>
+          <a href="#">JavaScript</a>
+          <a href="#">Bootstrap</a>
+        </div>
+        <div class="btns">
+          <a href="https://github.com/vishalprsharma/Ethical-Fashion-Site" class="btn"><i class="fab fa-github"></i>
+            GitHub</a>
+          <a href="https://vishalprsharma.github.io/Ethical-Fashion-Site/" class="btn"><i
+              class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/Movie Recom.png" alt="Portfolio Website">
+        <h3>Movie Recommendation System</h3>
+        <p>A web application that recommends movies based on user preferences and similarities between films,
+          helping users discover new movies tailored to their interests.</p>
+        <div class="skills">
+          <a href="#">Python</a>
+          <a href="#">Flask</a>
+          <a href="#">Pandas</a>
+          <a href="#">TensorFlow</a>
+        </div>
+        <div class="btns">
+          <a href="https://github.com/vishalprsharma/Movie-Recommendation-System" class="btn"><i
+              class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/blockchain.png" alt="Weather App">
+        <h3>Blockchain Certificate Generator</h3>
+        <p>A secure web application that generates digital certificates and verifies their authenticity using blockchain
+          technology,
+          ensuring data integrity and preventing tampering or forgery.</p>
+        <div class="skills">
+          <a href="#">Python</a>
+          <a href="#">Flask</a>
+          <a href="#">Blockchain</a>
+          <a href="#">QR Code</a>
+
+        </div>
+        <div class="btns">
+          <a href="https://github.com/vishalprsharma/BlockChain-Certificate" class="btn"><i class="fab fa-github"></i>
+            GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/cust.png" alt="Blog Website">
+        <h3>Automated Customer Data Integration System</h3>
+        <p>A system that automatically collects, validates, and integrates customer data from multiple sources,
+          ensuring accurate and consistent information in the database.</p>
+        <div class="skills">
+          <a href="#">Java</a>
+          <a href="#">JDBC</a>
+          <a href="#">MySQL</a>
+          <a href="#">SQL</a>
+        </div>
+        <div class="btns">
+          <a href="https://github.com/vishalprsharma/Automated-Customer-Data-Integration-System" class="btn"><i
+              class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/onepiece.png" alt="Game Landing Page">
+        <h3>One Piece Restaurant Website</h3>
+        <p>A responsive restaurant website that showcases menu items, customer reviews, and location details,
+          offering an engaging and user-friendly browsing experience across all devices.</p>
+        <div class="skills">
+          <a href="#">HTML</a>
+          <a href="#">CSS</a>
+          <a href="#">JavaScript</a>
+          <a href="#">Bootstrap</a>
+        </div>
+        <div class="btns">
+          <a href="https://github.com/vishalprsharma/One-Piece-Restraunt" class="btn"><i class="fab fa-github"></i>
+            GitHub</a>
+          <a href="https://vishalprsharma.github.io/One-Piece-Restraunt/" class="btn"><i
+              class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/job.png" alt="Task Manager">
+        <h3>Online Job Portal</h3>
+        <p>A web platform that connects job seekers and recruiters, allowing users to create profiles,
+          browse job listings, and manage applications through a secure and efficient system.</p>
+        <div class="skills">
+          <a href="#">Java</a>
+          <a href="#">Spring Boot</a>
+          <a href="#">MySQL</a>
+          <a href="#">MongoDB</a>
+        </div>
+        <div class="btns">
+          <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services" id="services">
+    <p>Skills</p>
+    <h1>My Expertise and Skills</h1>
+    <hr>
+    <div class="services-container">
+
+      <div class="service-card">
+        <img src="images/PL.png" alt="Web Development">
+        <h3>Programming Languages</h3>
+        <p>Python, Java, JavaScript, C, C#, R, SQL</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/Web.png" alt="Web Development">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, React, Node.js, Flask, Bootstrap</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/DSML.png" alt="Web Development">
+        <h3>Data Science & Machine Learning</h3>
+        <p>Pandas, NumPy, TensorFlow, Scikit-learn, Jupyter</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/Cloud.png" alt="Web Development">
+        <h3>Cloud & DevOps</h3>
+        <p>AWS, Docker, Kubernetes, Jenkins, CI/CD Pipelines</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/Tools.png" alt="Web Development">
+        <h3>Tools & Platforms</h3>
+        <p>Git, GitHub, JIRA, ServiceNow, VS Code</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/core cs.png" alt="Web Development">
+        <h3>Core Computer Science</h3>
+        <p>Data Structures, Algorithms, OOP, DBMS, Operating Systems</p>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <p>Contact</p>
+    <h1>Get in Touch with Me</h1>
+    <div class="contact-content">
+      <div class="contact-info slide-in-left">
+        <p>I'm always open to discuss exciting projects and new opportunities. Let's collaborate!</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>vishalpr.sharma123.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 88373 24457</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Bangalore, India</span>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/vishalprsharma" class="social-link" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/vishal-prasad-sharma-327634229/" class="social-link" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://wa.me/qr/AMQUVEZHBUPMD1 " class="social-link" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form slide-in-right">
+        <form action="https://formspree.io/f/xgvkkweq" method="POST" id="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required name="user_name">
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required name="user_email">
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-send">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <h2 class="footer-logo">Vishal Prasad Sharma</h2>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#services">Expertise</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="footer-social">
+        <a href="https://github.com/vishalprsharma" target="_blank" aria-label="GitHub"><i
+            class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/vishal-prasad-sharma-327634229/" target="_blank" aria-label="LinkedIn"><i
+            class="fa-brands fa-linkedin"></i></a>
+        <a href="https://wa.me/qr/AMQUVEZHBUPMD1 " target="_blank" aria-label="WhatsApp"><i
+            class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <p class="footer-copy">&copy; Vishal Sharma. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
